@@ -1,4 +1,6 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -504,14 +506,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h4 id="_플레이어_인원_추가_http_request"><a class="link" href="#_플레이어_인원_추가_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/games</span> HTTP/1.1
-<span class="hljs-attribute">Content-Type</span>: application/json;charset=UTF-8
-<span class="hljs-attribute">Content-Length</span>: 22
-<span class="hljs-attribute">Host</span>: localhost:8080
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /games HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 22
+Host: localhost:8080
 
-<span class="json">{
-  <span class="hljs-attr">"player_num"</span> : <span class="hljs-number">3</span>
-}</span></code></pre>
+{
+  "player_num" : 3
+}</code></pre>
 </div>
 </div>
 </div>
@@ -519,13 +521,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h4 id="_플레이어_인원_추가_http_response"><a class="link" href="#_플레이어_인원_추가_http_response">HTTP response</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 <span class="hljs-number">200</span> OK
-<span class="hljs-attribute">Content-Type</span>: application/json;charset=UTF-8
-<span class="hljs-attribute">Content-Length</span>: 14
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 14
 
-<span class="json">{
-  <span class="hljs-attr">"id"</span> : <span class="hljs-number">1</span>
-}</span></code></pre>
+{
+  "id" : 1
+}</code></pre>
 </div>
 </div>
 </div>
@@ -536,15 +538,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h4 id="_랜덤_단어_선택_http_request"><a class="link" href="#_랜덤_단어_선택_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/games/random-words</span> HTTP/1.1
-<span class="hljs-attribute">Content-Type</span>: application/json;charset=UTF-8
-<span class="hljs-attribute">Content-Length</span>: 54
-<span class="hljs-attribute">Host</span>: localhost:8080
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /games/random-words HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 54
+Host: localhost:8080
 
-<span class="json">{
-  <span class="hljs-attr">"id"</span> : <span class="hljs-number">1</span>,
-  <span class="hljs-attr">"korean_name"</span> : <span class="hljs-string">"스케이트보드"</span>
-}</span></code></pre>
+{
+  "id" : 1,
+  "korean_name" : "스케이트보드"
+}</code></pre>
 </div>
 </div>
 </div>
@@ -552,13 +554,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h4 id="_랜덤_단어_선택_http_response"><a class="link" href="#_랜덤_단어_선택_http_response">HTTP response</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 <span class="hljs-number">200</span> OK
-<span class="hljs-attribute">Content-Type</span>: application/json;charset=UTF-8
-<span class="hljs-attribute">Content-Length</span>: 35
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 35
 
-<span class="json">{
-  <span class="hljs-attr">"english_name"</span> : <span class="hljs-string">"skateboard"</span>
-}</span></code></pre>
+{
+  "english_name" : "skateboard"
+}</code></pre>
 </div>
 </div>
 </div>
@@ -574,12 +576,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h4 id="_사진_전송_http_request"><a class="link" href="#_사진_전송_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/draws/1/1</span> HTTP/1.1
-<span class="hljs-attribute">Content-Type</span>: application/json;charset=UTF-8
-<span class="hljs-attribute">Content-Length</span>: 37
-<span class="hljs-attribute">Host</span>: localhost:8080
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /draws/games/1/player-no/1 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 37
+Host: localhost:8080
 
-<span class="bash"><span class="hljs-string">"여기에 파일을 넣어주세요"</span></span></code></pre>
+"여기에 파일을 넣어주세요"</code></pre>
 </div>
 </div>
 </div>
@@ -587,13 +589,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h4 id="_사진_전송_http_response"><a class="link" href="#_사진_전송_http_response">HTTP response</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 <span class="hljs-number">200</span> OK
-<span class="hljs-attribute">Content-Type</span>: application/json;charset=UTF-8
-<span class="hljs-attribute">Content-Length</span>: 19
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 19
 
-<span class="json">{
-  <span class="hljs-attr">"draw_id"</span> : <span class="hljs-number">1</span>
-}</span></code></pre>
+{
+  "draw_id" : 1
+}</code></pre>
 </div>
 </div>
 </div>
@@ -609,9 +611,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h4 id="_랜덤_단어_조회_http_request"><a class="link" href="#_랜덤_단어_조회_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/dictionaries/random-words</span> HTTP/1.1
-<span class="hljs-attribute">Content-Type</span>: application/json;charset=UTF-8
-<span class="hljs-attribute">Host</span>: localhost:8080</code></pre>
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /dictionaries/random-words HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080</code></pre>
 </div>
 </div>
 </div>
@@ -619,13 +621,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h4 id="_랜덤_단어_조회_http_response"><a class="link" href="#_랜덤_단어_조회_http_response">HTTP response</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 <span class="hljs-number">200</span> OK
-<span class="hljs-attribute">Content-Type</span>: application/json;charset=UTF-8
-<span class="hljs-attribute">Content-Length</span>: 33
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 33
 
-<span class="json">{
-  <span class="hljs-attr">"korean_name"</span> : <span class="hljs-string">"바나나"</span>
-}</span></code></pre>
+{
+  "korean_name" : "바나나"
+}</code></pre>
 </div>
 </div>
 </div>
@@ -641,9 +643,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h4 id="_draw_id로_결과_조회개인_http_request"><a class="link" href="#_draw_id로_결과_조회개인_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/results/draw/1</span> HTTP/1.1
-<span class="hljs-attribute">Content-Type</span>: application/json;charset=UTF-8
-<span class="hljs-attribute">Host</span>: localhost:8080</code></pre>
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /results/draws/1 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080</code></pre>
 </div>
 </div>
 </div>
@@ -651,45 +653,45 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h4 id="_draw_id로_결과_조회개인_http_response"><a class="link" href="#_draw_id로_결과_조회개인_http_response">HTTP response</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 <span class="hljs-number">200</span> OK
-<span class="hljs-attribute">Content-Type</span>: application/json;charset=UTF-8
-<span class="hljs-attribute">Content-Length</span>: 874
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 874
 
-<span class="json">{
-  <span class="hljs-attr">"image_url"</span> : <span class="hljs-string">"http://someDoodleImageUrlToS3"</span>,
-  <span class="hljs-attr">"random_word"</span> : {
-    <span class="hljs-attr">"id"</span> : <span class="hljs-number">1</span>,
-    <span class="hljs-attr">"similarity"</span> : <span class="hljs-number">100.0</span>,
-    <span class="hljs-attr">"korean_name"</span> : <span class="hljs-string">"사과"</span>,
-    <span class="hljs-attr">"english_name"</span> : <span class="hljs-string">"Apple"</span>,
-    <span class="hljs-attr">"image_url"</span> : <span class="hljs-string">"http://someDoodleImageUrlToS3"</span>
+{
+  "image_url" : "http://someDoodleImageUrlToS3",
+  "random_word" : {
+    "id" : 1,
+    "similarity" : 100.0,
+    "korean_name" : "사과",
+    "english_name" : "Apple",
+    "image_url" : "http://someDoodleImageUrlToS3"
   },
-  <span class="hljs-attr">"top_five"</span> : [ {
-    <span class="hljs-attr">"id"</span> : <span class="hljs-number">2</span>,
-    <span class="hljs-attr">"similarity"</span> : <span class="hljs-number">90.0</span>,
-    <span class="hljs-attr">"korean_name"</span> : <span class="hljs-string">"오렌지"</span>,
-    <span class="hljs-attr">"english_name"</span> : <span class="hljs-string">"Orange"</span>,
-    <span class="hljs-attr">"image_url"</span> : <span class="hljs-string">"http://someDoodleImageUrlToS3"</span>
+  "top_five" : [ {
+    "id" : 2,
+    "similarity" : 90.0,
+    "korean_name" : "오렌지",
+    "english_name" : "Orange",
+    "image_url" : "http://someDoodleImageUrlToS3"
   }, {
-    <span class="hljs-attr">"id"</span> : <span class="hljs-number">3</span>,
-    <span class="hljs-attr">"similarity"</span> : <span class="hljs-number">80.0</span>,
-    <span class="hljs-attr">"korean_name"</span> : <span class="hljs-string">"배"</span>,
-    <span class="hljs-attr">"english_name"</span> : <span class="hljs-string">"Pear"</span>,
-    <span class="hljs-attr">"image_url"</span> : <span class="hljs-string">"http://someDoodleImageUrlToS3"</span>
+    "id" : 3,
+    "similarity" : 80.0,
+    "korean_name" : "배",
+    "english_name" : "Pear",
+    "image_url" : "http://someDoodleImageUrlToS3"
   }, {
-    <span class="hljs-attr">"id"</span> : <span class="hljs-number">4</span>,
-    <span class="hljs-attr">"similarity"</span> : <span class="hljs-number">70.0</span>,
-    <span class="hljs-attr">"korean_name"</span> : <span class="hljs-string">"원"</span>,
-    <span class="hljs-attr">"english_name"</span> : <span class="hljs-string">"Circle"</span>,
-    <span class="hljs-attr">"image_url"</span> : <span class="hljs-string">"http://someDoodleImageUrlToS3"</span>
+    "id" : 4,
+    "similarity" : 70.0,
+    "korean_name" : "원",
+    "english_name" : "Circle",
+    "image_url" : "http://someDoodleImageUrlToS3"
   }, {
-    <span class="hljs-attr">"id"</span> : <span class="hljs-number">5</span>,
-    <span class="hljs-attr">"similarity"</span> : <span class="hljs-number">60.0</span>,
-    <span class="hljs-attr">"korean_name"</span> : <span class="hljs-string">"햄버거"</span>,
-    <span class="hljs-attr">"english_name"</span> : <span class="hljs-string">"Hamburger"</span>,
-    <span class="hljs-attr">"image_url"</span> : <span class="hljs-string">"http://someDoodleImageUrlToS3"</span>
+    "id" : 5,
+    "similarity" : 60.0,
+    "korean_name" : "햄버거",
+    "english_name" : "Hamburger",
+    "image_url" : "http://someDoodleImageUrlToS3"
   } ]
-}</span></code></pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -700,9 +702,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h4 id="_game_id로_결과_조회다인_http_request"><a class="link" href="#_game_id로_결과_조회다인_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/results/game/1</span> HTTP/1.1
-<span class="hljs-attribute">Content-Type</span>: application/json;charset=UTF-8
-<span class="hljs-attribute">Host</span>: localhost:8080</code></pre>
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /results/games/1 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080</code></pre>
 </div>
 </div>
 </div>
@@ -710,24 +712,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h4 id="_game_id로_결과_조회다인_http_response"><a class="link" href="#_game_id로_결과_조회다인_http_response">HTTP response</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 <span class="hljs-number">200</span> OK
-<span class="hljs-attribute">Content-Type</span>: application/json;charset=UTF-8
-<span class="hljs-attribute">Content-Length</span>: 292
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 292
 
-<span class="json">{
-  <span class="hljs-attr">"random_word"</span> : <span class="hljs-string">"사과"</span>,
-  <span class="hljs-attr">"results"</span> : [ {
-    <span class="hljs-attr">"draw_id"</span> : <span class="hljs-number">1</span>,
-    <span class="hljs-attr">"player_no"</span> : <span class="hljs-number">1</span>,
-    <span class="hljs-attr">"image_url"</span> : <span class="hljs-string">"http://someResultImageUrlToS3"</span>,
-    <span class="hljs-attr">"similarity"</span> : <span class="hljs-number">90.0</span>
+{
+  "random_word" : "사과",
+  "results" : [ {
+    "draw_id" : 1,
+    "player_no" : 1,
+    "image_url" : "http://someResultImageUrlToS3",
+    "similarity" : 90.0
   }, {
-    <span class="hljs-attr">"draw_id"</span> : <span class="hljs-number">2</span>,
-    <span class="hljs-attr">"player_no"</span> : <span class="hljs-number">2</span>,
-    <span class="hljs-attr">"image_url"</span> : <span class="hljs-string">"http://someResultImageUrlToS3"</span>,
-    <span class="hljs-attr">"similarity"</span> : <span class="hljs-number">98.0</span>
+    "draw_id" : 2,
+    "player_no" : 2,
+    "image_url" : "http://someResultImageUrlToS3",
+    "similarity" : 98.0
   } ]
-}</span></code></pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -737,7 +739,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-07-29 14:06:41 +0900
+Last updated 2023-08-08 01:33:09 +0900
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
@@ -747,5 +749,5 @@ if (!hljs.initHighlighting.called) {
   ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
 }
 </script>
-
-</body></html>
+</body>
+</html>
